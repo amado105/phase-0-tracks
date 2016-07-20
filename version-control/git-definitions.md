@@ -17,3 +17,5 @@ A commit is a saved version of a file. In other words, one commits a file to mak
 * What is a merge conflict?
 
 A merge conflict occurs when trying to merge various branches with different code and the computer cannot merge them. 
+
+Tag Your teacher!!!
