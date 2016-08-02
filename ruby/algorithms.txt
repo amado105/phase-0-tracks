@@ -24,9 +24,8 @@
 	Else continue to next step
 - Open water lid
 	until the water is at the indicated-water-line
-		fill up the water container 
-		put back lid 
-	if water is already at the line, continue to next step
+		fill up the water container  
+	if water is already at the line, put back lid 
 - If coffee maker is off
 	press on button
 	else move on to next step
