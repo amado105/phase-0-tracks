@@ -1,0 +1,58 @@
+
+===Instructions for WallE===
+
+
+- Enter elevator 
+- Turn 180 degrees
+- Move in front of floor buttons
+- For each button in front of WallE
+- Look at each symbol on each button 
+		- if the symbol does not match the desired destination 
+			- Move on to next symbol 
+		- Else if the symbol is the same as the current destination 
+			- Move on to the next symbol 
+		- Else 
+			Press the button to go to desired destination
+- move in front of the door
+- exit the elevator 
+
+
+===How to make my morning coffee===
+
+- Stand in front of the coffee maker
+	if it is unplugged, plug it in
+	Else continue to next step
+- Open water lid
+	until the water is at the indicated-water-line
+		fill up the water container 
+		put back lid 
+	if water is already at the line, continue to next step
+- If coffee maker is off
+	press on button
+	else move on to next step
+- Open drawer of coffee choices 
+	Until you find the flavor desired
+		 look through every flavor
+	if you do not find the desired flavor
+		cry all day because you have no coffee 
+	otherwise
+		place the flavor in the coffee maker 
+- Place coffee cup under coffee maker
+- Look for the largest size option button on the coffee maker
+	if the cup size is the same size as the large size option button
+		press the button
+	if the cup is too small
+		get a bigger cup 
+- Once the coffee is finished, remove the cup
+- until the coffee has cooled to drinking temperature
+	blow on the coffee 
+	let it rest for 1 min
+-Once it is at drinking temperature, enjoy!
+
+		
+		
+	
+	
+			
+		
+
