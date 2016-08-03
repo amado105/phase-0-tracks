@@ -1,0 +1,26 @@
+.column-1 {
+	background-color: yellow;
+	display: inline-block;
+	width: 48%;
+
+}
+
+.column-2 {
+	background-color: orange;
+	display: inline-block;
+	width: 48%;
+}
+
+h1 {
+	font-family: sans-serif;
+}
+
+@media screen and (max-width: 500px){
+	.column-1 { 
+		width: 90%;
+	}
+	.column-2 {
+		width: 90%;
+	}
+
+	}
