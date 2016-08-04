@@ -18,18 +18,6 @@ order_garlic_bread = gets.chomp
 puts "Would you like to enroll in the company's health insurance?"
 health_insurance = gets.chomp
 
-puts "Do you have any allergies?"
-allergies = gets.chomp
-
-while allergies != "done"
-	if allergies == "sunshine"
-		puts "Probably a vampire."
-	else 
-		puts "Do you have any allergies?"
-	end
-	allergies = gets.chomp
-end
-
 age_verification = 2016 - age
 
 if name == "Drake Cula" || name == "Tu Fang"
@@ -54,7 +42,20 @@ else
 	end
 end
 
+puts "Do you have any allergies?"
+allergies = gets.chomp
+
+while allergies != "done"
+	if allergies == "sunshine"
+		puts "Probably a vampire."
+	else 
+		puts "Do you have any allergies?"
+	end
+	allergies = gets.chomp
+end
+
 employees_processed = employees_processed - 1
 
 end
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 	
