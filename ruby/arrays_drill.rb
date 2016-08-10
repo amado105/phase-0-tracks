@@ -1,11 +1,13 @@
-# Created an array
+# Created an array from various items 
 
 def build_array(arr, int, string)
 	new_array = [arr, int, string]
 end
 
+# Added items to an existing array
+
 def added_item(arr, str)
-	added_array = [arr, str]
+	added_array = arr << str
 end
 
 
