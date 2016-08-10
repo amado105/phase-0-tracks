@@ -1,3 +1,16 @@
+# Created an array
+
+def build_array(arr, int, string)
+	new_array = [arr, int, string]
+end
+
+def added_item(arr, str)
+	added_array = [arr, str]
+end
+
+
+# Playing with Arrays
+
 flowers = []
 p flowers
 
@@ -19,3 +32,12 @@ colors = ["blue", "red", "yellow"]
 
 colorful_flowers = flowers + colors
 p colorful_flowers
+
+
+# Calling our methods
+
+p build_array(["red", "blue", "yellow"], 2, "hello world")
+
+p added_item(["red", "blue", "yellow"], "ice-cream")
+p added_item(["sansa", "tyrion", "jamie"], "burgers")
+p added_item(["3", "4", "5"], "pizza")
