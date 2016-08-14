@@ -25,44 +25,53 @@
 
 
 
-puts "What is your name?"
-client_name = gets.chomp 
+	puts "What is your name?"
+	client_name = gets.chomp 
 
-puts "How old are you? This is for statistical data."
-client_age = gets.chomp
+	puts "How old are you? This is for statistical data."
+	client_age = gets.chomp
 
-puts "How many children do you have?"
-client_children = gets.chomp
+	client_age.to_i
 
-puts "Do you have a decor theme?"
-client_decor_theme = gets.chomp
+	puts "How many children do you have?"
+	client_children = gets.chomp
 
-if client_decor_theme == "yes"
-	puts "If you have a decor theme, what is it?"
-	decor_theme = gets.chomp
-else
-	puts "Okay next question"
-end 
+	client_children.to_i
 
-puts "Do you have an apartment or house?"
-aparment_house = gets.chomp
+	puts "Do you have a decor theme?"
+	client_decor_theme = gets.chomp
 
-puts "How many rooms in your residence?"
-number_of_rooms = gets.chomp
+	if client_decor_theme == "yes"
+		puts "If you have a decor theme, what is it?"
+		decor_theme = gets.chomp
+	else
+		puts "Okay next question"
+	end 
+
+	puts "Do you have an apartment or house?"
+	aparment_house = gets.chomp
+
+	puts "How many rooms in your residence?"
+	number_of_rooms = gets.chomp
+
+	number_of_rooms.to_i
+
+	interior_designer_job = {}
+
+	interior_designer_job = { 
+		:client_name => client_name,
+		:client_age => client_age,
+		:client_children => client_children,
+		:decor_theme => decor_theme, 
+		:aparment_house => aparment_house,
+		:number_of_rooms => number_of_rooms
+	}
 
 
-interior_designer_job = {}
+puts "Would you like to update any of your answers? (yes/no)"
+update_answers = gets.chomp
 
-interior_designer_job = { 
-	:client_name => client_name,
-	:client_age => client_age,
-	:client_children => client_children,
-	:decor_theme => decor_theme, 
-	:aparment_house => aparment_house,
-	:number_of_rooms => number_of_rooms
-}
-
-
+if update_answers == "yes"
 
 
 
