@@ -30,4 +30,25 @@ houses_words.each do |team, mottos|
 end 
 
 
-  
+
+ years = [1915, 1930, 1955, 1970, 1995, 2010]
+
+# years.delete_if { |decade| decade < 1960 }
+
+# years.keep_if { |number| number == 1955 }
+
+# years.select { |num| num.even? }
+
+# years.take_while { |i| i < 1957 }
+
+ages = { JimmyJohns: 21, Tommy: 12, Papa: 54, JohnnyBoy: 24}
+
+# ages.delete_if { |key, value| value < 23 }
+
+# ages.keep_if { |key, value| key.length > 5 }
+
+# ages.select { |key, value| value >= 21 } 
+
+
+
+
