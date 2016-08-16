@@ -23,17 +23,14 @@ puts "What is your name?"
 name = gets.chomp
 
 # This will run as long as the user types in anything but quit
-while name != "quit"
-	if name != "quit"
-		name2 = name.split(" ").reverse!
-		name3 = name2.join(" ")
-		name4 = name3.split("")
-		new_name = encrypt(name4)
-		hash[name] = new_name
-		puts "What is your name?"
-		name = gets.chomp
-	else
-	end
+until name == "quit"
+	name2 = name.split(" ").reverse!
+	name3 = name2.join(" ")
+	name4 = name3.split("")
+	new_name = encrypt(name4)
+	hash[name] = new_name
+	puts "What is your name?"
+	name = gets.chomp
 end
 
 # presents the data structure of all the names
