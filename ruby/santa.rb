@@ -1,42 +1,26 @@
 class Santa
-	
-	def initialize(gender, ethnicity) 
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+	def initialize(santa_gender, santa_ethnicity) 
 		p "Initializing Santa instance ..."
-		@gender = gender
-		@ethnicity = ethnicity
-		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		
+		gender = santa_gender
+		@ethnicity = santa_ethnicity
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		age = 0 
 	end 
-	
 	def speak
 		p "#{@gender} Santa says: Ho, ho, ho! Haaaappy holidays!"
 	end 
-	
 	def eat_milk_and_cookies(cookie)
 		p "That was a good *{<type of cookie here}!"
 	end
-	
 	def celebrate_birthday(age)
 		@age = age + 1 
 	end
-	
 	def get_mad_at(reindeer_name)
-		reindeer_ranking.delete(reindeer_name)
-		reindeer_ranking << reindeer_name
+		@reindeer_ranking.delete(reindeer_name)
+		@reindeer_ranking << reindeer_name
 	end
-	
-	def gender=(new_gender)
-		@gender = new_gender
-	end
-	
-	def age
-		@age
-	end
-	
-	def ethnicity
-		@ethnicity
-	end
-		
 end 
 
 
@@ -58,5 +42,16 @@ end
 =end
 
 
-claus = Santa.new 
+claus = Santa.new("male", "Latino") 
 claus.celebrate_birthday(55)
+claus.get_mad_at("Vixen")
+puts "This Santa is #{claus.age} years old and #{claus.ethnicity}."
+
+
+
+
+
+
+
+
+
