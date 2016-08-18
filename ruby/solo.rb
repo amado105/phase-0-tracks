@@ -35,19 +35,38 @@ class Amador
 end
 
 
+array = []
 
+puts "Create an instance: (type quit to exit)"
+house = gets.chomp
 
+# user can create as many instances as they like
+until house == "quit"
 
+	puts "Our House is currently subduing a vassal. Who is leading our forces?"
+	leader = gets.chomp.to_str
+	array << leader
+	puts "Which House is being subdued?"
+	vassal_family = gets.chomp.to_str
+	array << vassal_family
+	puts "We lost some family at the battle, how many did we have before?"
+	alive = gets.chomp.to_i
+	array << alive
+	
+	house = Amador.new(leader, vassal_family)
+	house.speak
+	puts "#{house.leader} is currently subduing House #{house.vassal_family}."
+	house.surviving_count(alive)
+	puts "But we #{house.alive} Amadors are enough to defeat our enemies."
+	
+	puts "Create an instance: (type quit to exit)"
+	house = gets.chomp
 
+end 
 
+# loops through the array and prints out the attributes of each instance 
+array.each { |data| puts "You entered: #{data}" }
 
-
-
-
-
-
-
-
-
+	
 
 
