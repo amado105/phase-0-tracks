@@ -12,3 +12,9 @@ function reverse(string) {
     newString += string[i];
   return newString;
 }
+
+if (1 == 1) {
+	reverse("hello");
+} else {
+	console.log("This is not equal!")
+}
