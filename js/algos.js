@@ -23,3 +23,23 @@ return longest;
 }
 
 console.log(longestWord(arr));
+
+function check(object1, object2) {
+	
+	var keys = Object.keys(object1);
+	var keys2 = Object.keys(object2);
+
+		for (var i = 0; i < keys.length; i++ ) {
+			if ((keys[i] == keys2[i]) && (object1[keys[i]] == object2[keys2[i]])) {
+				console.log("true");
+			}
+		else {
+			console.log("false")
+		}
+		}
+}
+
+var info1 = {name: "Steven", age: 55, weight: 120}
+var info2 = {name: "Tamir", age: 57, weight: 120}
+
+check(info1, info2);
