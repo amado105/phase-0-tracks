@@ -43,3 +43,23 @@ var info1 = {name: "Steven", age: 55, weight: 120}
 var info2 = {name: "Tamir", age: 57, weight: 120}
 
 check(info1, info2);
+
+function random(number){
+	var array = [];
+	for (var i = 0; i < number; i++) {
+		var length = Math.floor((Math.random() * 10) + 1);
+		var string = "ha".repeat(length);
+		array.push(string);
+	}
+	return array;
+}
+
+
+// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result
+
+for (var i = 0; i < 10; i++) {
+	var string = random(3);
+	console.log(string);
+	console.log(longestWord(string));
+}
+
