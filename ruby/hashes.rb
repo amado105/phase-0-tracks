@@ -1,3 +1,7 @@
+## RELEASE 3 IS AT THE BOTTOM BELOW THE LINE! ##
+
+
+
 # Can you use a variable to access an array?
 
 suitcase_items = []
