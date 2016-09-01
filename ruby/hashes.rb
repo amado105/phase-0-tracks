@@ -50,7 +50,32 @@ end
 #  change it to. if the key-value pair takes an integer as a value, 
 # convert the user input into an integer then update the key-value pair. 
 
+puts "Do you want to update any information? (type 'yes' to update or 'none' to skip)"
+update_info = gets.chomp
 
+if update_info == "yes"
+		puts "Which key would you like to update? (e.g. age, children, decor, residence, rooms) "
+		update_key = gets.chomp.to_sym
+		puts "What would you like to change it to?"
+		update_value = gets.chomp
+			if update_key == :age 
+				integer = update_value.to_i
+				client_info[update_key] = integer
+			elsif update_key == :children
+				integer = update_value.to_i
+				client_info[update_key] = integer
+			elsif update_key == :rooms 
+				integer = update_value.to_i
+				client_info[update_key] = integer 
+			else
+				client_info[update_key] = update_value
+			end 
+else 
+end 
+
+client_info.each do |value, key|
+	p "#{value}: #{key}"
+end 
 
 
 
