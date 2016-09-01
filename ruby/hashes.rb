@@ -1,3 +1,75 @@
+# Can you use a variable to access an array?
+
+suitcase_items = []
+
+suitcase_items << "thing" 
+suitcase_items << "stuff"
+suitcase_items << "item"
+suitcase_items << "object"
+
+variable = suitcase_items
+
+p variable
+=> ["thing", "stuff", "item", "object"]
+
+p variable[0] 
+ => "thing"
+
+p variable.last 
+=> "object"
+
+# What happens if you try to access an index that doesn't exist 
+# because the array is smaller than the index you provided?
+
+suitcase_items = []
+
+suitcase_items << "thing" 
+suitcase_items << "stuff"
+suitcase_items << "item"
+suitcase_items << "object"
+
+p suitcase_items[5]
+=> nil
+
+
+# Create a new Ruby file (call it what you like, you won't turn it in) 
+# and declare a hash that represents one person's application data.
+
+job_application = {
+	name: "Jenny Jenis",
+	address: "1234 One Street",
+	email: "jjen@gmail.com",
+	phone: "555-5555",
+	fave_blue: "turquois",
+	wallpaper: "chevrons",
+	ombre: "so last season"
+}
+
+# Add driver code at the bottom of your file to update some values and 
+# maybe add in a new value for whether the person was hired.
+
+job_application[:name] = "Jennifer Jenis"
+job_application[:fave_blue] = "royal blue"
+job_application[:status] = "hired"
+
+# What happens if store a key in a variable, 
+# then access the hash using the variable? Does it work?
+
+variable = job_application[:status]  
+p variable => "hired"
+
+
+# What happens when try an expression like your_hash[:name] + your_hash[:address] 
+# (or whatever keys you used)? Does it affect the original hash?
+
+p job_application[:name] + job_application[:address] 
+=> "Jennifer Jenis1234 One Street"
+# And it does not affect the original hash
+
+
+# ---------------------------------------------------------------------------------------------------
+
+## RELEASE 3
 
 # Create all the questions and then take the responses and convert them to the approptirate data 
 
