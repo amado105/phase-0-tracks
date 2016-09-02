@@ -43,3 +43,41 @@ westerosi_cities.map! do |location|
 end 
 
 
+years = [1915, 1930, 1955, 1970, 1995, 2010]
+
+# years.delete_if { |decade| decade < 1950 }
+
+# years.keep_if { |number| number == 1970 }
+
+# years.select { |num| num.even? }
+
+# years.take_while { |i| i < 1957 }
+
+ages = { jimmyjohns: 21, johnnyrockets: 12, papajohn: 54, carlsjr: 24} 
+
+# ages.delete_if { |key, value| value < 23 }
+
+# ages.keep_if { |key, value| key.length > 5 }
+
+# ages.select { |key, value| value >= 21 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
