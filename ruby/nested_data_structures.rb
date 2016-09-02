@@ -50,3 +50,21 @@ westeros = {
         },
     }
 }
+
+p westeros[:north][:enemies][0]
+#=> "Lannister"
+
+p westeros[:dorne][:ruling_house]
+#=> "Martell"
+
+p westeros[:riverlands][:family]
+#=> {:Blackfish=>62, :Edmund=>38}
+
+westeros[:dorne][:family][:Elaria] = 20
+p westeros[:dorne][:family]
+#=> {:Elaria=>20, :Elia=>23}
+
+p westeros[:north][:family].values
+#=> [19, 23, 16, 14]
+
+
