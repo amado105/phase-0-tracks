@@ -7,5 +7,24 @@
 # making this a new variable called index and print 
 # else p nil 
 
+arr = [42, 89, 23, 1, 234, 3, 12345]
 
+def search_array(array, integer)
+	new_array = []
+	array.each do |number|
+		new_array << number 
+		break if new_array.last == integer 
+	end 
+	if new_array.last == integer 
+		index = new_array.length - 1 
+		index 
+	else 
+		nil 
+	end 
+end 
+	
 
+p search_array(arr, 1)
+# => 3
+p search_array(arr, 24)
+# => nil
