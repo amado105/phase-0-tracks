@@ -25,6 +25,14 @@ end
 	
 
 p search_array(arr, 1)
-# => 3
+# => 5
 p search_array(arr, 24)
 # => nil
+
+
+# Needs to add the last term and the penultimate term together and add that new number 
+# to the fib terms 
+# So start with the first two fib terms in an array. The inputted number should indicate
+# how many times to loop to continue adding to the array.  
+# deal with edge cases with if and elsif 
+
