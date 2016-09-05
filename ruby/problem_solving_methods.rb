@@ -33,7 +33,8 @@ p search_array(arr, 24)
 # Needs to add the last term and the penultimate term together and add that new number 
 # to the fib terms 
 # So start with the first two fib terms in an array. The inputted number should indicate
-# how many times to loop to continue adding to the array.  
+# how many times to loop to continue adding to the array (need to subtract 2 because I am 
+# already starting with two terms in the array).  
 # deal with edge cases with if and elsif 
 
 def fib(number)
@@ -58,3 +59,20 @@ end
 # else 
 # 	puts "Failure"
 # end
+
+
+# create a loop and have swapped equal to false. and inside create an iteration that goes through the array 
+# one less times as the length of the array. the parameter will check if index of
+# the first term is > the index of the following term. if so, it will swap the two 
+# terms. and then swapped equal to true. lastly, it will break if it has not been 
+# swapped and then print the array. 
+
+
+
+
+
+
+
+
+
+
