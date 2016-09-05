@@ -36,3 +36,25 @@ p search_array(arr, 24)
 # how many times to loop to continue adding to the array.  
 # deal with edge cases with if and elsif 
 
+def fib(number)
+	fib_terms = [0, 1]
+if number == 0
+	nil
+elsif number == 1 
+	p [0]
+else 
+	terms = number - 2 
+		terms.times do 
+			add_number = fib_terms[-1] + fib_terms[-2]
+			fib_terms << add_number
+		end
+	p fib_terms
+end 
+end
+
+
+# if fib(100).last == 218922995834555169026
+# 	puts "It works!"
+# else 
+# 	puts "Failure"
+# end
