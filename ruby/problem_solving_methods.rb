@@ -67,6 +67,30 @@ end
 # terms. and then swapped equal to true. lastly, it will break if it has not been 
 # swapped and then print the array. 
 
+def bubble_sort(array)
+	n = array.length 
+
+	loop do 
+
+		swapped = false 
+
+		(n - 1).times do |i|
+			if array[i] > array[i + 1]
+				array[i], array[i + 1] = array[i + 1], array[i]
+				swapped = true
+			end 
+		end 
+
+		break if not swapped 
+	end 
+
+	array 
+end
+
+
+a = [1, 9, 2, 8, 3, 7, 4, 6, 5, 19, 10, 11]
+
+bubble_sort(a)
 
 
 
