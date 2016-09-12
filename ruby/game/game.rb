@@ -3,35 +3,28 @@ class Game
  def initialize(game_word) 
  	@game_word = game_word
  	@guess_count = game_word.length
- 	@letters_guessed = []
- 	@is_over = false  
+ 	@guessed_letters_array = []
+ 	@game_array = []
  end 
 
  def word_array
- 	@game_array = [] 
  	@game_array = @game_word.chars
- 	p @game_array
+ 	empty_array(@game_array)
  end 
 
- def empty_array
- 	@blank_array = []
+ def empty_array(array)
+ 	@guessing_array = []
  	@game_array.each do |letter|
  		letter = "_"
- 		@blank_array << letter
+ 		@guessing_array << letter
  	end
- 	p @blank_array
+ 	array_to_string(@guessing_array)
  end
 
- def array_to_string
- 	@blank_array.join(' ')
- 	p @blank_array
- end 
-
- def guessed_letters(letter)
- 	@guessed_letters_array = []
- 	@guessed_letters_array << letter
- 	p @guessed_letters 
- end 
+ def array_to_string(array)
+ 	@feedback_string = array.join(' ')
+ 	p @feedback_string
+ end
 
 
 end 
