@@ -1,0 +1,21 @@
+
+
+
+SELECT t1.col, t3.col 
+FROM table1 
+join table2 
+ON table1.primarykey = table2.foreignkey                         
+join table3 
+ON table2.primarykey = table3.foreignkey
+
+
+— To join multiple tables together:
+SELECT businesses.name, users.first_name, users.last_name, reviews.stars, reviews.comment  
+FROM businesses 
+JOIN reviews 
+ON businesses.id = reviews.business_id 
+JOIN users 
+ON reviews.user_id = users.id;
+
+— to view the reviews of one business:
+SELECT * FROM reviews WHERE business_id=1;
