@@ -1,0 +1,68 @@
+sqlite> SELECT * FROM songs;
+1|Money|5|1
+2|Breathe|4|1
+3|Another Brick|5|2
+4|Mother|3|2
+sqlite> SELECT * FROM albums;;
+1|Dark Side of the Moon|1973|11000000
+2|The Wall|1979|13000000
+sqlite> SELECT * FROM songs, albums WHERE songs.album_id = albums.id;
+1|Money|5|1|1|Dark Side of the Moon|1973|11000000
+2|Breathe|4|1|1|Dark Side of the Moon|1973|11000000
+3|Another Brick|5|2|2|The Wall|1979|13000000
+4|Mother|3|2|2|The Wall|1979|13000000
+sqlite> .header on
+sqlite> .mode column
+sqlite> SELECT * FROM songs, albums WHERE songs.album_id = albums.id;
+id          song_name   duration    album_id    id          album                  year        sales
+----------  ----------  ----------  ----------  ----------  ---------------------  ----------  ----------
+1           Money       5           1           1           Dark Side of the Moon  1973        11000000
+2           Breathe     4           1           1           Dark Side of the Moon  1973        11000000
+3           Another Br  5           2           2           The Wall               1979        13000000
+4           Mother      3           2           2           The Wall               1979        13000000
+sqlite> sqlite> SELECT songs.song_name, albums.album FROM songs JOIN albums ON songs.album_id = albums.id;
+Error: no such column: players.songs.song_name
+sqlite> SELECT songs.song_name, albums.album FROM songs JOIN albums ON songs.album_id = albums.id;
+song_name   album
+----------  ---------------------
+Money       Dark Side of the Moon
+Breathe     Dark Side of the Moon
+Another Br  The Wall
+Mother      The Wall
+sqlite> INSERT INTO songs (song_name, duration, album_id) VALUES ("Fake Song", 6, 2);
+sqlite> SELECT * FROM songs;
+id          song_name   duration    album_id
+----------  ----------  ----------  ----------
+1           Money       5           1
+2           Breathe     4           1
+3           Another Br  5           2
+4           Mother      3           2
+5           Fake Song   6           2
+sqlite> DELETE FROM songs WHERE song_name = "Fake Song";
+sqlite> SELECT * FROM songs;
+id          song_name   duration    album_id
+----------  ----------  ----------  ----------
+1           Money       5           1
+2           Breathe     4           1
+3           Another Br  5           2
+4           Mother      3           2
+sqlite> UPDATE songs SET duration=4 WHERE song_name="Mother";
+sqlite> SELECT * FROM songs;
+id          song_name   duration    album_id
+----------  ----------  ----------  ----------
+1           Money       5           1
+2           Breathe     4           1
+3           Another Br  5           2
+4           Mother      4           2
+sqlite> SELECT *  FROM songs CROSS JOIN albums;
+id          song_name   duration    album_id    id          album                  year        sales
+----------  ----------  ----------  ----------  ----------  ---------------------  ----------  ----------
+1           Money       5           1           1           Dark Side of the Moon  1973        11000000
+1           Money       5           1           2           The Wall               1979        13000000
+2           Breathe     4           1           1           Dark Side of the Moon  1973        11000000
+2           Breathe     4           1           2           The Wall               1979        13000000
+3           Another Br  5           2           1           Dark Side of the Moon  1973        11000000
+3           Another Br  5           2           2           The Wall               1979        13000000
+4           Mother      4           2           1           Dark Side of the Moon  1973        11000000
+4           Mother      4           2           2           The Wall               1979        13000000
+sqlite>
